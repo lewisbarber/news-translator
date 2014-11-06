@@ -11,7 +11,7 @@ import com.news.translator.repository.TranslationRepository;
 import com.news.translator.response.ExecuteTranslationResponse;
 
 @Service
-public class TranslantionServiceImpl implements TranslationService {
+public class TranslationServiceImpl implements TranslationService {
 
 	@Autowired
 	TranslationRepository translationRepository;
@@ -19,7 +19,7 @@ public class TranslantionServiceImpl implements TranslationService {
 	@Autowired
 	Environment env;
 
-	public TranslantionServiceImpl() {
+	public TranslationServiceImpl() {
 		Translate.setClientId(env.getProperty("microsoft.azure.client.id"));
 		Translate.setClientSecret(env.getProperty("microsoft.azure.client.secret"));
 	}
