@@ -6,3 +6,6 @@ An application that provides an interactive way to read German news articles and
 The application is hosted at the link below:
 
 http://demo.lewisbarber.me/news-translator
+
+![alt tag](http://lewisbarber.me/wp-content/uploads/2014/11/30.png)
+![alt tag](http://lewisbarber.me/wp-content/uploads/2014/11/31.png)
