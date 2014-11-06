@@ -1,0 +1,76 @@
+apply plugin: 'base'
+apply plugin: 'war'
+apply plugin: 'jetty'
+apply plugin: 'java'
+apply plugin: 'eclipse-wtp'
+apply plugin: 'idea'
+
+//ext.springVersion='3.2.2.RELEASE'
+ext.springVersion='4.0.7.RELEASE'
+ext.hibernateVersion='4.3.0.Final'
+ext.hibernateValidatorVersion='4.3.0.Final'
+ext.jUnitVersion = '4.11'
+ext.mockitoVersion = '1.9.5-rc1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+ 
+	// Log4j
+	compile ('log4j:log4j:1.2.17')
+ 
+    providedCompile 'javax.servlet:javax.servlet-api:3.0.1'
+	
+	// Spring Framework
+	compile "org.springframework:spring-test:$springVersion"
+    compile ('org.springframework.data:spring-data-jpa:1.7.0.RELEASE') {
+		exclude group:"org.springframework", module:"spring-asm"
+	}
+    compile "org.springframework:spring-jdbc:$springVersion"
+    compile "org.springframework:spring-tx:$springVersion"
+    compile "org.springframework:spring-orm:$springVersion"
+    compile "org.springframework:spring-aop:$springVersion"
+    compile "org.springframework:spring-webmvc:$springVersion"
+    compile "org.springframework:spring-oxm:$springVersion"
+	compile 'org.springframework.data:spring-data-oracle:1.0.0.RELEASE'
+	
+    // Annotation support
+    compile 'cglib:cglib-nodep:2.2.2'
+    compile 'org.aspectj:aspectjrt:1.6.12'
+    compile 'org.aspectj:aspectjweaver:1.6.12'        
+
+    // Hibernate
+    compile "org.hibernate:hibernate-entitymanager:$hibernateVersion"
+    compile "org.hibernate:hibernate-core:$hibernateVersion"    
+    compile "org.hibernate:hibernate-validator:$hibernateValidatorVersion"
+    compile "org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final"
+ 	compile 'org.hibernate:hibernate-envers:4.3.6.Final'
+ 
+    // MySQL
+    compile 'mysql:mysql-connector-java:5.0.8'
+
+	// Jackson (for JSON mapping of objects)
+	compile "com.fasterxml.jackson.core:jackson-databind:2.2.0"
+	compile "org.codehaus.jackson:jackson-mapper-asl:1.8.5"
+	
+	// Tag lib
+	compile "jstl:jstl:1.2"
+	compile "taglibs:standard:1.1.2"
+	
+	// Commons
+	compile 'commons-codec:commons-codec:1.9'
+	compile 'org.apache.commons:commons-lang3:3.1'
+	
+	// Microsoft Translation API
+	compile 'com.memetix:microsoft-translator-java-api:0.6.2'
+	
+	// Jsoup
+	compile 'org.jsoup:jsoup:1.7.2'
+	
+}
+
+eclipse {
+    project.natures "org.springframework.ide.eclipse.core.springnature"
+}

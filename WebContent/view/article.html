@@ -1,0 +1,17 @@
+<div class="bread-crumb">
+	<div class="inner">
+		<a href="#/">Home</a> > <strong>{{article.title}}</strong>
+	</div>
+</div>
+<div class="article-holder">
+	<div class="inner">
+		<h1>{{article.title}}</h1>
+		<hr />
+		<div class="article" ng-bind-html="renderHtml(article.body)"></div>
+		<hr />
+		<div class="article-footer">
+			<div><span class="grey">Source: </span><a target="_blank" href="{{article.newsSource.url}}">{{article.newsSource.name}}</a></div>
+			<div><span class="grey">Original Link: </span><a target="_blank" href="{{article.url}}">{{article.url}}</a></div>
+		</div>
+	</div>
+</div>

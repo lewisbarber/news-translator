@@ -1,0 +1,64 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+.translated_word {
+    cursor:pointer;
+    display:inline-block;
+    padding:1px 2px 1px 2px;
+    border-radius:5px;
+    margin:0px;
+}
+.translated_word:hover {
+    background:#FFFACD;
+    color:#FFB00F;
+}
+.inner {
+	margin:0 auto;
+	width:80%;
+}
+.bread-crumb {
+	background:#F5F5F5;
+	border-bottom:1px solid #F1F1F1;
+	margin-bottom:15px;
+	padding:10px 0px;
+}
+.article {
+	text-align:justify;
+}
+.article img {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;    
+}
+.img-holder {
+	width:150px;
+	display:inline-block;
+}
+.title-holder {
+	display:inline-block;
+}
+.grey {
+	color:#666666;
+}
+.article-footer {
+	font-size:13px;
+	margin-bottom:30px;
+}
+table, tr, td, table tr:nth-of-type(even) {
+	background:none;
+	border:0;
+}
+hr {
+	color:#f1f1f1;
+	background:#f1f1f1;
+	border-color:#f1f1f1;
+}
+.all-articles hr {
+	margin:40px 0px 20px 0px;
+}
+.all-articles {
+	margin-bottom:80px;
+}
+.clear {
+	clear:both;
+}

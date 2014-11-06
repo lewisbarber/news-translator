@@ -1,0 +1,18 @@
+<div class="bread-crumb">
+	<div class="inner">
+		<a href="#/">Home</a>
+	</div>
+</div>
+<div>
+	<div class="all-articles inner">
+		<div ng-repeat="article in articles track by $index">
+			<h2>{{article.title}}</h2>
+			<div class="article">
+				<img src="{{article.imagePath}}" border="0" width="150" />
+				<p>{{article.body}}... <a href="#/article/{{article.id}}">Read More</a></p>
+			</div>
+			<div class="clear"></div>
+			<hr ng-if="$index < (articles.length - 1)" />
+		</div>
+	</div>
+</div> 
